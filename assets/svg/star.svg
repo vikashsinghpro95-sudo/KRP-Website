@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <!-- Faceted 5-point star -->
+  <polygon points="50,5 64,35 97,38 72,61 79,94 50,77 21,94 28,61 3,38 36,35" stroke="currentColor" stroke-width="2"/>
+  <!-- Facet shadow halves -->
+  <polygon points="50,5 50,77 64,35" fill="currentColor" opacity="0.6"/>
+  <polygon points="97,38 50,77 72,61" fill="currentColor" opacity="0.6"/>
+  <polygon points="79,94 50,77 50,77" fill="currentColor" opacity="0.6"/>
+  <polygon points="21,94 50,77 28,61" fill="currentColor" opacity="0.3"/>
+  <polygon points="3,38 50,77 36,35" fill="currentColor" opacity="0.3"/>
+</svg>

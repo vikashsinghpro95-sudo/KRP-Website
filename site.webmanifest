@@ -1,0 +1,16 @@
+{
+  "name": "Kota Rankers Point Pune",
+  "short_name": "KRP Pune",
+  "description": "Defence Academy & Competitive Exam Institute in Narhe, Pune",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060D2B",
+  "theme_color": "#0A1A4F",
+  "icons": [
+    {
+      "src": "/assets/svg/krp-logo.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

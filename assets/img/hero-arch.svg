@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700" fill="none">
+  <defs>
+    <linearGradient id="heroArchBg" x1="0" y1="0" x2="600" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#102670"/>
+      <stop offset="50%" stop-color="#0A1A4F"/>
+      <stop offset="100%" stop-color="#060D2B"/>
+    </linearGradient>
+    <pattern id="archGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="#FFB800" fill-opacity="0.15"/>
+    </pattern>
+    <clipPath id="archClip">
+      <path d="M50 250 C50 110, 160 30, 300 30 C440 30, 550 110, 550 250 L550 670 C550 680, 540 690, 530 690 L70 690 C60 690, 50 680, 50 670 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Arch Frame Background with Clip -->
+  <g clip-path="url(#archClip)">
+    <rect width="600" height="700" fill="url(#heroArchBg)"/>
+    <rect width="600" height="700" fill="url(#archGrid)"/>
+    
+    <!-- Central Academy Building / Portal Silhouette -->
+    <g transform="translate(150, 200)" opacity="0.35" stroke="#FFCB3D" stroke-width="2" fill="none">
+      <path d="M0 350 L0 180 L150 100 L300 180 L300 350"/>
+      <path d="M50 350 L50 210 C50 160, 250 160, 250 210 L250 350"/>
+      <line x1="150" y1="100" x2="150" y2="40" stroke="#FFB800" stroke-width="3"/>
+      <polygon points="150,40 185,50 150,60" fill="#FFB800" stroke="none"/>
+    </g>
+
+    <!-- Radiating Sun / Knowledge Rays -->
+    <circle cx="300" cy="300" r="140" stroke="#FFB800" stroke-width="1.5" stroke-dasharray="3 6" opacity="0.4"/>
+    <circle cx="300" cy="300" r="100" stroke="#2E62F0" stroke-width="2" opacity="0.3"/>
+    
+    <!-- Student / Officer Aspirant Silhouette with Gold Backlight -->
+    <g transform="translate(200, 310)">
+      <!-- Torso -->
+      <path d="M100 140 C50 140, 20 190, 10 280 L190 280 C180 190, 150 140, 100 140 Z" fill="#060D2B" stroke="#FFB800" stroke-width="2"/>
+      <!-- Head -->
+      <circle cx="100" cy="85" r="40" fill="#060D2B" stroke="#FFB800" stroke-width="2"/>
+      <!-- Beret / Cap Accent -->
+      <path d="M60 70 C70 50, 120 40, 140 60 C150 70, 130 78, 60 70 Z" fill="#FFB800"/>
+    </g>
+
+    <!-- Decorative Compass Watermark inside arch -->
+    <g transform="translate(300, 160)" opacity="0.25">
+      <circle cx="0" cy="0" r="60" stroke="#FFF" stroke-width="1"/>
+      <polygon points="0,-60 10,-10 0,0" fill="#FFB800"/>
+      <polygon points="0,-60 -10,-10 0,0" fill="#FFF"/>
+    </g>
+
+    <!-- Overlay Badge Note -->
+    <rect x="120" y="580" width="360" height="60" rx="12" fill="#0A1A4F" fill-opacity="0.95" stroke="#FFB800" stroke-width="1.5"/>
+    <text x="300" y="605" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#FFB800" text-anchor="middle" letter-spacing="0.1em">KRP CADET &amp; RANKER CAMPUS</text>
+    <text x="300" y="625" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#B9C4E4" text-anchor="middle">Narhe, Pune · Photo Slot (Replace with campus photo)</text>
+  </g>
+
+  <!-- Golden Arch Outline -->
+  <path d="M50 250 C50 110, 160 30, 300 30 C440 30, 550 110, 550 250 L550 670 C550 680, 540 690, 530 690 L70 690 C60 690, 50 680, 50 670 Z" stroke="#FFB800" stroke-width="3" fill="none"/>
+</svg>

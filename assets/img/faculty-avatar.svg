@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" width="300" height="360" fill="none">
+  <defs>
+    <linearGradient id="facGrad" x1="0" y1="0" x2="300" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#102670"/>
+      <stop offset="100%" stop-color="#060D2B"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="360" rx="16" fill="url(#facGrad)"/>
+  <circle cx="150" cy="130" r="55" fill="#0A1A4F" stroke="#FFB800" stroke-width="2"/>
+  <path d="M70 310 C80 230, 120 200, 150 200 C180 200, 220 230, 230 310 Z" fill="#0A1A4F" stroke="#FFB800" stroke-width="2"/>
+  <!-- Star Lapel Badge -->
+  <polygon points="150,225 153,232 160,232 155,236 157,243 150,239 143,243 145,236 140,232 147,232" fill="#FFB800"/>
+  <rect x="50" y="315" width="200" height="24" rx="12" fill="#060D2B" stroke="#2E62F0" stroke-width="1"/>
+  <text x="150" y="331" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#B9C4E4" text-anchor="middle" letter-spacing="0.08em">FACULTY PHOTO PLACEHOLDER</text>
+</svg>

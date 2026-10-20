@@ -1,0 +1,348 @@
+/* ==========================================================================
+   KOTA RANKERS POINT (KRP) · DESIGN SYSTEM BASE & TOKENS
+   Direction: "Prestige meets momentum. Kota-grade discipline in Pune."
+   ========================================================================== */
+
+:root {
+  /* Surface & Brand Palette */
+  --navy-950: #060D2B;
+  --navy-900: #0A1A4F;
+  --navy-800: #102670;
+  --royal-600: #1D3FA8;
+  --cobalt-500: #2E62F0;
+  --sky-100: #E6EEFF;
+  --sky-50: #F4F7FF;
+
+  /* Accent Gold */
+  --gold-500: #FFB800;
+  --gold-400: #FFCB3D;
+  --gold-100: #FFF3CC;
+  --gold-700: #8A5E00;
+
+  /* Neutrals & Text */
+  --white: #FFFFFF;
+  --mist: #F5F7FC;
+  --line: #DCE3F2;
+  --line-dark: rgba(255, 255, 255, 0.12);
+  --ink: #0B1230;
+  --ink-muted: #4B5878;
+  --on-navy-muted: #B9C4E4;
+
+  /* Semantic */
+  --wa: #25D366;
+  --red-500: #D92D20;
+
+  /* Gradients */
+  --grad-hero: linear-gradient(135deg, #060D2B 0%, #0A1A4F 55%, #1D3FA8 100%);
+  --grad-gold: linear-gradient(180deg, #FFCB3D 0%, #FFB800 100%);
+  --grad-wash: linear-gradient(180deg, #F4F7FF 0%, #FFFFFF 100%);
+  --grad-card-dark: linear-gradient(145deg, #102670 0%, #0A1A4F 100%);
+  --grad-navy-gold: linear-gradient(180deg, rgba(10,26,79,0.92) 0%, rgba(6,13,43,0.98) 100%);
+
+  /* Typography */
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 1px 3px rgba(6, 13, 43, 0.06), 0 4px 12px -2px rgba(10, 26, 79, 0.08);
+  --shadow-md: 0 1px 2px rgba(6, 13, 43, 0.06), 0 14px 36px -14px rgba(10, 26, 79, 0.28);
+  --shadow-lg: 0 22px 48px -16px rgba(10, 26, 79, 0.38);
+  --shadow-gold: 0 8px 24px -4px rgba(255, 184, 0, 0.38);
+  --shadow-dark: 0 12px 32px -8px rgba(0, 0, 0, 0.5);
+
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Layout */
+  --container-max: 1280px;
+  --header-height: 80px;
+  --topbar-height: 38px;
+  --section-py: clamp(4rem, 7.5vw, 7rem);
+}
+
+/* ==========================================================================
+   RESET & GLOBAL RULES
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* NON-NEGOTIABLE CONSTRAINT: Strictly NO ITALICS anywhere */
+  font-style: normal !important;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background-color: var(--mist);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Accessible Skip Link */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 20px;
+  background: var(--gold-500);
+  color: var(--navy-950);
+  padding: 10px 18px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  z-index: 10000;
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 15px;
+}
+
+/* Accessibility Focus Ring */
+:focus-visible {
+  outline: 3px solid var(--cobalt-500);
+  outline-offset: 3px;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--navy-900);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5.5vw, 5.25rem);
+  line-height: 1.02;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: clamp(1.875rem, 3.8vw, 3.25rem);
+  line-height: 1.08;
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.lead {
+  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  line-height: 1.65;
+  color: var(--ink-muted);
+}
+
+a {
+  color: var(--cobalt-500);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  color: var(--royal-600);
+}
+
+img, svg, picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  color: inherit;
+}
+
+/* ==========================================================================
+   SIGNATURE DESIGN ACCENTS & UTILITIES
+   ========================================================================== */
+
+/* Gold Highlight Marker (signature detail) */
+.highlight {
+  background: linear-gradient(transparent 62%, rgba(255, 184, 0, 0.6) 0);
+  display: inline;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.text-gold {
+  color: var(--gold-500) !important;
+}
+
+.text-gold-safe {
+  color: var(--gold-700) !important;
+}
+
+.text-white {
+  color: var(--white) !important;
+}
+
+.text-muted {
+  color: var(--ink-muted) !important;
+}
+
+.text-navy-muted {
+  color: var(--on-navy-muted) !important;
+}
+
+/* Eyebrow Label */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--cobalt-500);
+  margin-bottom: 0.85rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 3px;
+  background: var(--gold-500);
+  border-radius: 2px;
+}
+
+.eyebrow-dark {
+  color: var(--gold-400);
+}
+
+.eyebrow-dark::before {
+  background: var(--gold-400);
+}
+
+/* Big Display Numbers */
+.numeral-display {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 1;
+  color: var(--gold-500);
+}
+
+.numeral-outline {
+  -webkit-text-stroke: 2px var(--gold-500);
+  color: transparent;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 3.5vw, 2rem);
+  padding-right: clamp(1rem, 3.5vw, 2rem);
+}
+
+.container-narrow {
+  max-width: 960px;
+}
+
+.section-py {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+
+.bg-navy {
+  background-color: var(--navy-900);
+  color: var(--white);
+}
+
+.bg-navy-950 {
+  background-color: var(--navy-950);
+  color: var(--white);
+}
+
+.bg-sky {
+  background-color: var(--sky-50);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+/* Watermark Pattern Backgrounds */
+.has-pattern-grid {
+  background-image: url('../svg/texture-grid.svg');
+  background-repeat: repeat;
+}
+
+.has-compass-watermark {
+  position: relative;
+}
+
+.has-compass-watermark::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  background-image: url('../svg/compass-rose.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track {
+    animation: none !important;
+  }
+}

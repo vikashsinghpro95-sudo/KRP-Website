@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" fill="none">
+  <rect width="600" height="400" fill="#0A1A4F"/>
+  <rect x="50" y="50" width="500" height="300" rx="12" fill="#102670" stroke="#FFB800" stroke-width="2"/>
+  <!-- Obstacle ground lines -->
+  <line x1="80" y1="280" x2="520" y2="280" stroke="#FFB800" stroke-width="3"/>
+  <!-- Obstacle ropes, parallel beams, zig-zag -->
+  <path d="M120 280 L120 180 L200 180 L200 280" stroke="#FFCB3D" stroke-width="4"/>
+  <path d="M250 280 L270 200 L330 200 L350 280" stroke="#2E62F0" stroke-width="4"/>
+  <path d="M390 280 L420 150 L460 280" stroke="#FFCB3D" stroke-width="4"/>
+  <!-- Compass motif in corner -->
+  <circle cx="480" cy="110" r="30" stroke="#FFB800" stroke-width="1.5" stroke-dasharray="2 3"/>
+  <polygon points="480,85 486,110 480,105 474,110" fill="#FFB800"/>
+  <text x="300" y="90" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#FFB800" text-anchor="middle" letter-spacing="0.1em">GTO GROUND &amp; SSB TRAINING AREA</text>
+  <text x="300" y="335" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#FFFFFF" opacity="0.7" text-anchor="middle">Physical &amp; Obstacle Course · Photo Placeholder</text>
+</svg>
