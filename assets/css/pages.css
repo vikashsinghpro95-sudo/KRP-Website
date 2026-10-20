@@ -21,6 +21,8 @@
   justify-content: center;
   padding: 3rem 0 6.5rem;
   overflow: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* Background Compass Rose Watermark with slow rotation */
@@ -38,6 +40,12 @@
   pointer-events: none;
   animation: slowSpin 140s linear infinite;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-compass-bg {
+    display: none;
+  }
 }
 
 @keyframes slowSpin {
@@ -324,6 +332,13 @@
   .stat-band-card {
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-band-card {
+    padding: 1.75rem 1rem;
+    gap: 1.5rem 0.75rem;
   }
 }
 
@@ -1257,7 +1272,7 @@
 /* 9-Course Grid */
 .course-grid-9 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 1.75rem;
 }
 
@@ -1374,7 +1389,7 @@
 /* 9 Key Programme Features Grid */
 .nda-features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 1.5rem;
   margin-top: 2.5rem;
 }
@@ -1422,7 +1437,7 @@
 /* Two-Year Curriculum Comparison (Class 11th & 12th) */
 .nda-years-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: 2rem;
   margin: 2.5rem 0;
 }
@@ -1535,7 +1550,7 @@
 /* Written Syllabus Dual Pillars */
 .nda-syllabus-columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: 2rem;
   margin-top: 2.5rem;
 }
@@ -1574,7 +1589,7 @@
 /* SSB 6-Module Grid */
 .ssb-modules-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 1.5rem;
   margin: 2.5rem 0;
 }
@@ -1612,7 +1627,7 @@
 /* Structured Daily Routine Timeline (6 Steps) */
 .routine-steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1.25rem;
   margin: 2.5rem 0;
 }

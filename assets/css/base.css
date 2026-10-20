@@ -83,6 +83,9 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -93,7 +96,16 @@ body {
   color: var(--ink);
   background-color: var(--mist);
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
   position: relative;
+}
+
+main {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* Accessible Skip Link */

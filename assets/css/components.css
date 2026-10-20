@@ -40,6 +40,20 @@
   font-size: 1.0625rem;
 }
 
+@media (max-width: 640px) {
+  .btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+  .btn-lg {
+    height: auto;
+    min-height: 50px;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
 /* Primary Gold Button */
 .btn-primary {
   background: var(--grad-gold);

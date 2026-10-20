@@ -42,6 +42,7 @@ function initButtonRipple() {
  * 2. Soft Gold Radial Cursor Glow on Navy Sections
  */
 function initCursorGlow() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
   const navySections = document.querySelectorAll('.hero-section, .flagship-band, .inner-hero, .footer-cta-band, .site-footer');
   if (!navySections.length) return;
 
