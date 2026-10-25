@@ -28,3 +28,6 @@ ehthumbs.db
 scratch/
 tmp/
 temp/
+
+# Deployment scripts with credentials
+deploy_ftp.py
