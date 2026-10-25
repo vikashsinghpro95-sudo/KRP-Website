@@ -126,6 +126,14 @@
     <!-- Faculty List with Filter Chips -->
     <section class="section-py">
       <div class="container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 2.75rem;" data-reveal>
+          <div class="eyebrow">Academic Mentorship Council</div>
+          <h2 style="font-size: 2.25rem; font-weight: 800; color: var(--navy-900); text-transform: uppercase; letter-spacing: 0.04em;">Meet Our Faculties</h2>
+          <p style="color: var(--ink-muted); font-size: 1.05rem;">
+            Filter by subject to explore their qualifications, teaching pedigree, and competitive examination specializations.
+          </p>
+        </div>
+
         <!-- Subject Filter Chips -->
         <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 3.5rem;" data-filter-group=".faculty-profile">
           <button type="button" class="exam-pill-btn is-active" data-filter="all">All Mentors</button>
@@ -136,224 +144,117 @@
           <button type="button" class="exam-pill-btn" data-filter="defence">Defence &amp; SSB</button>
         </div>
 
-        <!-- Faculty Editorial Roster (Left and Right Divisions) -->
-        <div class="faculty-roster">
+        <!-- Faculty 3D Popout Roster (3x3 Layout) -->
+        <div class="faculty-roster faculty-grid-3x3">
           <!-- Mentor 1: Dr. Bhavesh A.W. (Physics & Academic Head) -->
-          <article class="faculty-profile" data-category="physics" data-reveal>
-            <!-- Left Division: Big Square Image with Name Overlay in Lower Left -->
-            <div class="faculty-left-media">
-              <div class="faculty-square-frame">
-                <span class="faculty-square-badge badge-gold">Academic Head</span>
-                <picture>
-                  <source srcset="../assets/img/trainers/dr-bhavesh-aw-square.webp" type="image/webp">
-                  <img src="../assets/img/trainers/dr-bhavesh-aw-square.jpg" alt="Dr. Bhavesh A.W. - Physics Faculty &amp; Academic Head at Kota Rankers Point Pune" class="faculty-square-img" width="340" height="340" loading="lazy" decoding="async">
-                </picture>
-                <div class="faculty-media-overlay">
-                  <span class="overlay-dept">Physics Department</span>
-                  <div class="overlay-name">Dr. Bhavesh A.W.</div>
-                </div>
-              </div>
+          <article class="faculty-3d-card faculty-profile" data-category="physics" data-reveal>
+            <div class="faculty-popout-wrap">
+              <picture>
+                <source srcset="../assets/img/trainers/dr-bhavesh-aw-popout.webp" type="image/webp">
+                <img src="../assets/img/trainers/dr-bhavesh-aw-popout.png" alt="Dr. Bhavesh A.W. - Physics Faculty &amp; Academic Head" class="faculty-popout-img" width="195" height="219" loading="lazy" decoding="async">
+              </picture>
             </div>
-            <!-- Right Division: All Details -->
-            <div class="faculty-right-content">
-              <div class="faculty-dept-eyebrow">Physics Department · Academic Head</div>
-              <h2 class="faculty-headline-name">Dr. Bhavesh A.W.</h2>
-              <div class="faculty-qual-line">MBBS, MD · 13+ Years Teaching Kota &amp; National Batches</div>
-              <div class="faculty-chip-list">
-                <span class="faculty-chip">JEE Advanced</span>
-                <span class="faculty-chip">NEET-UG</span>
-                <span class="faculty-chip">NDA Physics</span>
-                <span class="faculty-chip">Academic Head</span>
-              </div>
-              <p class="faculty-narrative">Specializes in deep conceptual mechanics, electrodynamics, modern physics, and high-speed problem-solving frameworks for India's toughest competitive entrance exams.</p>
+            <div class="faculty-3d-info">
+              <h3 class="faculty-3d-name">Dr. Bhavesh A.W.</h3>
+              <div class="faculty-3d-subject">Physics Department · Academic Head</div>
+              <div class="faculty-3d-qual">MBBS, MD · 13+ Years Teaching Kota &amp; National Batches</div>
+              <div class="faculty-3d-pedigree">JEE Advanced · NEET-UG · NDA Physics Specialist</div>
             </div>
           </article>
 
           <!-- Mentor 2: Mr. Sarvesh P. (Senior Chemistry Faculty - NIT & Ex-Aakash) -->
-          <article class="faculty-profile" data-category="chemistry" data-reveal data-reveal-delay="100">
-            <!-- Left Division: Big Square Image with Name Overlay in Lower Left -->
-            <div class="faculty-left-media">
-              <div class="faculty-square-frame">
-                <span class="faculty-square-badge badge-navy">Ex-Aakash · 20+ Yrs</span>
-                <picture>
-                  <source srcset="../assets/img/trainers/mr-sarvesh-p-square.webp" type="image/webp">
-                  <img src="../assets/img/trainers/mr-sarvesh-p-square.jpg" alt="Mr. Sarvesh P. - Senior Chemistry Faculty at Kota Rankers Point Pune" class="faculty-square-img" width="340" height="340" loading="lazy" decoding="async">
-                </picture>
-                <div class="faculty-media-overlay">
-                  <span class="overlay-dept">Chemistry Department</span>
-                  <div class="overlay-name">Mr. Sarvesh P.</div>
-                </div>
-              </div>
+          <article class="faculty-3d-card faculty-profile" data-category="chemistry" data-reveal data-reveal-delay="100">
+            <div class="faculty-popout-wrap">
+              <picture>
+                <source srcset="../assets/img/trainers/mr-sarvesh-p-popout.webp" type="image/webp">
+                <img src="../assets/img/trainers/mr-sarvesh-p-popout.png" alt="Mr. Sarvesh P. - Senior Chemistry Faculty" class="faculty-popout-img" width="195" height="219" loading="lazy" decoding="async">
+              </picture>
             </div>
-            <!-- Right Division: All Details -->
-            <div class="faculty-right-content">
-              <div class="faculty-dept-eyebrow">Chemistry Department · Senior Mentor</div>
-              <h2 class="faculty-headline-name">Mr. Sarvesh P.</h2>
-              <div class="faculty-qual-line">Chemical Engg. (NIT) · Ex-Aakash Senior Faculty · 20+ Years Exp</div>
-              <div class="faculty-chip-list">
-                <span class="faculty-chip">JEE Main &amp; Adv</span>
-                <span class="faculty-chip">NEET Chemistry</span>
-                <span class="faculty-chip">Physical &amp; Inorganic</span>
-                <span class="faculty-chip">NIT Alum</span>
-              </div>
-              <p class="faculty-narrative">Veteran chemistry educator with two decades of guiding top national rankers. Master of physical chemistry numericals, thermodynamics, equilibrium, and NCERT inorganic retention.</p>
+            <div class="faculty-3d-info">
+              <h3 class="faculty-3d-name">Mr. Sarvesh P.</h3>
+              <div class="faculty-3d-subject">Chemistry Department · Senior Mentor</div>
+              <div class="faculty-3d-qual">Chemical Engg. (NIT) · Ex-Aakash Senior Faculty · 20+ Yrs Exp</div>
+              <div class="faculty-3d-pedigree">Physical &amp; Inorganic Chemistry · JEE Main &amp; Adv · NEET</div>
             </div>
           </article>
 
           <!-- Mentor 3: Mrs. Ruqaiya S.S. (Senior Chemistry - Organic Chemistry) -->
-          <article class="faculty-profile" data-category="chemistry" data-reveal data-reveal-delay="100">
-            <!-- Left Division: Big Square Image with Name Overlay in Lower Left -->
-            <div class="faculty-left-media">
-              <div class="faculty-square-frame">
-                <span class="faculty-square-badge badge-navy">Organic Chem · 12+ Yrs</span>
-                <picture>
-                  <source srcset="../assets/img/trainers/mrs-ruqaiya-ss-square.webp" type="image/webp">
-                  <img src="../assets/img/trainers/mrs-ruqaiya-ss-square.jpg" alt="Mrs. Ruqaiya S.S. - Senior Chemistry Faculty at Kota Rankers Point Pune" class="faculty-square-img" width="340" height="340" loading="lazy" decoding="async">
-                </picture>
-                <div class="faculty-media-overlay">
-                  <span class="overlay-dept">Organic Chemistry</span>
-                  <div class="overlay-name">Mrs. Ruqaiya S.S.</div>
-                </div>
-              </div>
+          <article class="faculty-3d-card faculty-profile" data-category="chemistry" data-reveal data-reveal-delay="200">
+            <div class="faculty-popout-wrap">
+              <picture>
+                <source srcset="../assets/img/trainers/mrs-ruqaiya-ss-popout.webp" type="image/webp">
+                <img src="../assets/img/trainers/mrs-ruqaiya-ss-popout.png" alt="Mrs. Ruqaiya S.S. - Senior Chemistry Faculty" class="faculty-popout-img" width="195" height="219" loading="lazy" decoding="async">
+              </picture>
             </div>
-            <!-- Right Division: All Details -->
-            <div class="faculty-right-content">
-              <div class="faculty-dept-eyebrow">Organic Chemistry Department</div>
-              <h2 class="faculty-headline-name">Mrs. Ruqaiya S.S.</h2>
-              <div class="faculty-qual-line">B.Sc, M.Sc Organic Chemistry, B.Ed · 12+ Years Exp</div>
-              <div class="faculty-chip-list">
-                <span class="faculty-chip">Organic Chem</span>
-                <span class="faculty-chip">JEE</span>
-                <span class="faculty-chip">NEET</span>
-                <span class="faculty-chip">MHT-CET</span>
-                <span class="faculty-chip">IMUCET &amp; NDA</span>
-              </div>
-              <p class="faculty-narrative">Senior Organic Chemistry mentor specializing in named reactions, multi-step reaction mechanisms, stereochemistry, and NCERT line-by-line synthesis pathways across national batches.</p>
+            <div class="faculty-3d-info">
+              <h3 class="faculty-3d-name">Mrs. Ruqaiya S.S.</h3>
+              <div class="faculty-3d-subject">Organic Chemistry Department</div>
+              <div class="faculty-3d-qual">B.Sc, M.Sc Organic Chemistry, B.Ed · 12+ Years Exp</div>
+              <div class="faculty-3d-pedigree">Reaction Mechanisms &amp; NCERT Synthesis · JEE &amp; NEET</div>
             </div>
           </article>
 
           <!-- Mentor 4: Mr. Ramiz Bailim (Senior Mathematics - VIT Pune & Ex-PW) -->
-          <article class="faculty-profile" data-category="mathematics" data-reveal>
-            <!-- Left Division: Big Square Image with Name Overlay in Lower Left -->
-            <div class="faculty-left-media">
-              <div class="faculty-square-frame">
-                <span class="faculty-square-badge badge-navy">Ex-PhysicsWallah · 12+ Yrs</span>
-                <picture>
-                  <source srcset="../assets/img/trainers/mr-ramiz-bailim-square.webp" type="image/webp">
-                  <img src="../assets/img/trainers/mr-ramiz-bailim-square.jpg" alt="Mr. Ramiz Bailim - Mathematics Faculty at Kota Rankers Point Pune" class="faculty-square-img" width="340" height="340" loading="lazy" decoding="async">
-                </picture>
-                <div class="faculty-media-overlay">
-                  <span class="overlay-dept">Mathematics Department</span>
-                  <div class="overlay-name">Mr. Ramiz Bailim</div>
-                </div>
-              </div>
+          <article class="faculty-3d-card faculty-profile" data-category="mathematics" data-reveal>
+            <div class="faculty-popout-wrap">
+              <picture>
+                <source srcset="../assets/img/trainers/mr-ramiz-bailim-popout.webp" type="image/webp">
+                <img src="../assets/img/trainers/mr-ramiz-bailim-popout.png" alt="Mr. Ramiz Bailim - Mathematics Faculty" class="faculty-popout-img" width="195" height="219" loading="lazy" decoding="async">
+              </picture>
             </div>
-            <!-- Right Division: All Details -->
-            <div class="faculty-right-content">
-              <div class="faculty-dept-eyebrow">Mathematics Department</div>
-              <h2 class="faculty-headline-name">Mr. Ramiz Bailim</h2>
-              <div class="faculty-qual-line">M.Tech (VIT Pune) · Ex-PhysicsWallah Faculty · 12+ Years Exp</div>
-              <div class="faculty-chip-list">
-                <span class="faculty-chip">JEE Advanced</span>
-                <span class="faculty-chip">NDA Paper 1</span>
-                <span class="faculty-chip">Calculus &amp; 3D</span>
-                <span class="faculty-chip">VIT Pune M.Tech</span>
-              </div>
-              <p class="faculty-narrative">Senior Mathematics Faculty with a premier national teaching track record. Expert in Differential &amp; Integral Calculus, Coordinate Geometry, and time-saving shortcuts for NDA and JEE Advanced.</p>
+            <div class="faculty-3d-info">
+              <h3 class="faculty-3d-name">Mr. Ramiz Bailim</h3>
+              <div class="faculty-3d-subject">Mathematics Department</div>
+              <div class="faculty-3d-qual">M.Tech (VIT Pune) · Ex-PhysicsWallah Faculty · 12+ Yrs Exp</div>
+              <div class="faculty-3d-pedigree">Calculus &amp; 3D Geometry · JEE Advanced · NDA Paper 1</div>
             </div>
           </article>
 
           <!-- Mentor 5: Mrs. Chaitali A.S. (Senior Mathematics - NDA, JEE & Engg Maths) -->
-          <article class="faculty-profile" data-category="mathematics" data-reveal data-reveal-delay="100">
-            <!-- Left Division: Big Square Image with Name Overlay in Lower Left -->
-            <div class="faculty-left-media">
-              <div class="faculty-square-frame">
-                <span class="faculty-square-badge badge-navy">Maths &amp; Engg · 15+ Yrs</span>
-                <picture>
-                  <source srcset="../assets/img/trainers/mrs-chaitali-as-square.webp" type="image/webp">
-                  <img src="../assets/img/trainers/mrs-chaitali-as-square.jpg" alt="Mrs. Chaitali A.S. - Mathematics Faculty at Kota Rankers Point Pune" class="faculty-square-img" width="340" height="340" loading="lazy" decoding="async">
-                </picture>
-                <div class="faculty-media-overlay">
-                  <span class="overlay-dept">Mathematics &amp; Engg</span>
-                  <div class="overlay-name">Mrs. Chaitali A.S.</div>
-                </div>
-              </div>
+          <article class="faculty-3d-card faculty-profile" data-category="mathematics" data-reveal data-reveal-delay="100">
+            <div class="faculty-popout-wrap">
+              <picture>
+                <source srcset="../assets/img/trainers/mrs-chaitali-as-popout.webp" type="image/webp">
+                <img src="../assets/img/trainers/mrs-chaitali-as-popout.png" alt="Mrs. Chaitali A.S. - Mathematics Faculty" class="faculty-popout-img" width="195" height="219" loading="lazy" decoding="async">
+              </picture>
             </div>
-            <!-- Right Division: All Details -->
-            <div class="faculty-right-content">
-              <div class="faculty-dept-eyebrow">Mathematics &amp; Engineering Maths</div>
-              <h2 class="faculty-headline-name">Mrs. Chaitali A.S.</h2>
-              <div class="faculty-qual-line">B.Sc, M.Sc Mathematics, B.Ed · 15+ Years Experience</div>
-              <div class="faculty-chip-list">
-                <span class="faculty-chip">NDA Maths</span>
-                <span class="faculty-chip">JEE Main</span>
-                <span class="faculty-chip">IMUCET</span>
-                <span class="faculty-chip">MHT-CET</span>
-                <span class="faculty-chip">M1 &amp; M2 Engg</span>
-              </div>
-              <p class="faculty-narrative">Veteran mathematics mentor with 15 years experience training competitive aspirants for NDA, JEE, IMUCET, MHT-CET, as well as University Higher Engineering Mathematics (M1/M2) with crystal-clear fundamentals.</p>
+            <div class="faculty-3d-info">
+              <h3 class="faculty-3d-name">Mrs. Chaitali A.S.</h3>
+              <div class="faculty-3d-subject">Mathematics &amp; Engineering Maths</div>
+              <div class="faculty-3d-qual">B.Sc, M.Sc Mathematics, B.Ed · 15+ Years Exp</div>
+              <div class="faculty-3d-pedigree">NDA Maths · JEE Main · IMUCET · MHT-CET · Engg M1/M2</div>
             </div>
           </article>
 
           <!-- Mentor 6: Mrs. Hemangi D. (Senior Biology - NEET Specialist) -->
-          <article class="faculty-profile" data-category="biology" data-reveal data-reveal-delay="100">
-            <!-- Left Division: Big Square Image with Name Overlay in Lower Left -->
-            <div class="faculty-left-media">
-              <div class="faculty-square-frame">
-                <span class="faculty-square-badge badge-gold">NEET Specialist · 20+ Yrs</span>
-                <picture>
-                  <source srcset="../assets/img/trainers/mrs-hemangi-d-square.webp" type="image/webp">
-                  <img src="../assets/img/trainers/mrs-hemangi-d-square.jpg" alt="Mrs. Hemangi D. - Senior Biology Faculty &amp; NEET Specialist at Kota Rankers Point Pune" class="faculty-square-img" width="340" height="340" loading="lazy" decoding="async">
-                </picture>
-                <div class="faculty-media-overlay">
-                  <span class="overlay-dept">Biology Department</span>
-                  <div class="overlay-name">Mrs. Hemangi D.</div>
-                </div>
-              </div>
+          <article class="faculty-3d-card faculty-profile" data-category="biology" data-reveal data-reveal-delay="200">
+            <div class="faculty-popout-wrap">
+              <picture>
+                <source srcset="../assets/img/trainers/mrs-hemangi-d-popout.webp" type="image/webp">
+                <img src="../assets/img/trainers/mrs-hemangi-d-popout.png" alt="Mrs. Hemangi D. - Senior Biology Faculty" class="faculty-popout-img" width="195" height="219" loading="lazy" decoding="async">
+              </picture>
             </div>
-            <!-- Right Division: All Details -->
-            <div class="faculty-right-content">
-              <div class="faculty-dept-eyebrow">Biology Department · NEET Specialist</div>
-              <h2 class="faculty-headline-name">Mrs. Hemangi D.</h2>
-              <div class="faculty-qual-line">B.Sc Microbiology · 20+ Years Dedicated Medical Coaching</div>
-              <div class="faculty-chip-list">
-                <span class="faculty-chip">NEET Bio 360/360</span>
-                <span class="faculty-chip">Botany &amp; Zoology</span>
-                <span class="faculty-chip">NCERT Line-by-Line</span>
-                <span class="faculty-chip">Assertion-Reason</span>
-              </div>
-              <p class="faculty-narrative">Two decades of focused medical coaching specializing in 360/360 NEET Biology. Expert in NCERT retention, diagrammatic precision, high-yield genetics, ecology, and human physiology drills.</p>
+            <div class="faculty-3d-info">
+              <h3 class="faculty-3d-name">Mrs. Hemangi D.</h3>
+              <div class="faculty-3d-subject">Biology Department · NEET Specialist</div>
+              <div class="faculty-3d-qual">B.Sc Microbiology · 20+ Years Dedicated Medical Coaching</div>
+              <div class="faculty-3d-pedigree">NEET Bio 360/360 · Botany &amp; Zoology · NCERT Line-by-Line</div>
             </div>
           </article>
 
           <!-- Mentor 7: Mr. Kunal Deshmukh (Defence Wing - GAT Specialist) -->
-          <article class="faculty-profile" data-category="defence" data-reveal>
-            <!-- Left Division: Big Square Image with Name Overlay in Lower Left -->
-            <div class="faculty-left-media">
-              <div class="faculty-square-frame">
-                <span class="faculty-square-badge badge-navy">NDA &amp; CDS GAT</span>
-                <picture>
-                  <source srcset="../assets/img/trainers/mr-kunal-deshmukh-square.webp" type="image/webp">
-                  <img src="../assets/img/trainers/mr-kunal-deshmukh-square.jpg" alt="Mr. Kunal Deshmukh - GAT Specialist for NDA &amp; CDS at Kota Rankers Point Pune" class="faculty-square-img" width="340" height="340" loading="lazy" decoding="async">
-                </picture>
-                <div class="faculty-media-overlay">
-                  <span class="overlay-dept">Defence Studies &amp; GAT</span>
-                  <div class="overlay-name">Mr. Kunal Deshmukh</div>
-                </div>
-              </div>
+          <article class="faculty-3d-card faculty-profile" data-category="defence" data-reveal>
+            <div class="faculty-popout-wrap">
+              <picture>
+                <source srcset="../assets/img/trainers/mr-kunal-deshmukh-popout.webp" type="image/webp">
+                <img src="../assets/img/trainers/mr-kunal-deshmukh-popout.png" alt="Mr. Kunal Deshmukh - Defence Studies &amp; GAT" class="faculty-popout-img" width="195" height="219" loading="lazy" decoding="async">
+              </picture>
             </div>
-            <!-- Right Division: All Details -->
-            <div class="faculty-right-content">
-              <div class="faculty-dept-eyebrow">Defence Studies &amp; General Ability (GAT)</div>
-              <h2 class="faculty-headline-name">Mr. Kunal Deshmukh</h2>
-              <div class="faculty-qual-line">M.A. Political Science, Diploma in International Relations</div>
-              <div class="faculty-chip-list">
-                <span class="faculty-chip">NDA GAT</span>
-                <span class="faculty-chip">CDS</span>
-                <span class="faculty-chip">Polity &amp; IR</span>
-                <span class="faculty-chip">Current Affairs</span>
-              </div>
-              <p class="faculty-narrative">General Ability Test (GAT) specialist for NDA and CDS defence aspirants. In-depth mentor for Indian Polity &amp; Constitution, Modern Indian History, Physical Geography, and Strategic Defence Affairs.</p>
+            <div class="faculty-3d-info">
+              <h3 class="faculty-3d-name">Mr. Kunal Deshmukh</h3>
+              <div class="faculty-3d-subject">Defence Studies &amp; General Ability (GAT)</div>
+              <div class="faculty-3d-qual">M.A. Political Science, Dip. International Relations</div>
+              <div class="faculty-3d-pedigree">NDA &amp; CDS GAT · Indian Polity · Modern History · Current Affairs</div>
             </div>
           </article>
         </div>

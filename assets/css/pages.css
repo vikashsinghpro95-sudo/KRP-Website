@@ -830,251 +830,129 @@
     font-size: 0.72rem;
   }
 }
-
-.faculty-roster {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
-  max-width: 1120px;
-  margin: 1.5rem auto 0;
+/* ==========================================================================
+   3D Pop-out Transparent Faculty Avatars & 3x3 Grid Layout
+   (Matched to Reference: Blue circle rim, transparent pop-out head, 3x3 layout)
+   ========================================================================== */
+.faculty-grid-3x3,
+.faculty-roster,
+.home-faculty-spotlight {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem 2.25rem;
+  max-width: 1140px;
+  margin: 2rem auto 3.5rem;
+  justify-content: center;
 }
 
-.faculty-profile {
+.faculty-3d-card,
+.faculty-profile,
+.home-faculty-item {
   display: flex;
-  align-items: flex-start;
-  gap: 3.25rem;
-  padding-bottom: 3.5rem;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   position: relative;
   transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.3s ease;
-}
-
-.faculty-profile:last-child {
+  padding: 0.5rem 0.5rem 1rem;
   border-bottom: none;
-  padding-bottom: 0;
 }
 
-/* Left Division: Big Square Image & Overlay */
-.faculty-left-media,
-.faculty-avatar-wrap {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  width: 340px;
+.faculty-3d-card:hover,
+.faculty-profile:hover,
+.home-faculty-item:hover {
+  transform: translateY(-8px);
 }
 
-.faculty-square-frame {
+/* 3D Popout Avatar Container */
+.faculty-popout-wrap {
   position: relative;
-  width: 340px;
-  height: 340px;
-  aspect-ratio: 1 / 1;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #f1f5f9;
-  box-shadow: 0 16px 36px -8px rgba(6, 13, 43, 0.18), 0 4px 14px -2px rgba(6, 13, 43, 0.08);
-  border: 1px solid rgba(14, 116, 144, 0.14);
-  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  width: 195px;
+  max-width: 100%;
+  aspect-ratio: 800 / 900;
+  margin: 0 auto 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 14px 22px rgba(6, 13, 43, 0.12));
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.35s ease;
 }
 
-.faculty-profile:hover .faculty-square-frame,
-.home-faculty-item:hover .faculty-square-frame {
-  transform: translateY(-4px);
-  box-shadow: 0 22px 48px -8px rgba(6, 13, 43, 0.24), 0 0 0 2px var(--gold-400);
-  border-color: var(--gold-400);
+.faculty-3d-card:hover .faculty-popout-wrap,
+.faculty-profile:hover .faculty-popout-wrap,
+.home-faculty-item:hover .faculty-popout-wrap {
+  transform: scale(1.05);
+  filter: drop-shadow(0 20px 30px rgba(29, 78, 216, 0.22));
 }
 
-.faculty-square-img {
+.faculty-popout-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
-  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.faculty-profile:hover .faculty-square-img,
-.home-faculty-item:hover .faculty-square-img {
-  transform: scale(1.05);
-}
-
-/* Floating Badge at Top-Left of Square Frame */
-.faculty-square-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  z-index: 3;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  padding: 0.32rem 0.85rem;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  user-select: none;
   pointer-events: none;
 }
 
-.faculty-square-badge.badge-gold {
-  background: var(--gold-500);
-  color: var(--navy-950);
-  font-weight: 900;
-  border: 1px solid var(--gold-400);
-}
-
-.faculty-square-badge.badge-navy {
-  background: rgba(6, 13, 43, 0.92);
-  color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-}
-
-/* Lower-Left Text Overlay on Big Square Image (Compact to keep face fully visible) */
-.faculty-media-overlay {
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 30%;
-  background: linear-gradient(to top, rgba(6, 13, 43, 0.96) 0%, rgba(6, 13, 43, 0.7) 65%, transparent 100%);
+/* Faculty Info directly below avatar */
+.faculty-3d-info {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  text-align: left;
-  padding: 0.85rem 1.25rem 1rem;
-  z-index: 2;
-  pointer-events: none;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
 }
 
-.overlay-dept {
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--gold-400);
-  margin-bottom: 0.2rem;
-  line-height: 1.2;
-}
-
-.overlay-name {
+.faculty-3d-name {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
-  color: #ffffff;
-  line-height: 1.2;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  color: var(--navy-900);
+  line-height: 1.3;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
 }
 
-.overlay-sub {
-  display: none;
+.faculty-3d-card:hover .faculty-3d-name,
+.faculty-profile:hover .faculty-3d-name,
+.home-faculty-item:hover .faculty-3d-name {
+  color: #1d4ed8;
 }
 
-/* Right Division: All Details */
-.faculty-right-content,
-.faculty-details {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding-top: 0.35rem;
+.faculty-3d-subject {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #1d4ed8; /* Blue italic matching reference */
+  line-height: 1.35;
+  margin-bottom: 0.45rem;
 }
 
-.faculty-dept-eyebrow {
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--royal-600);
+.faculty-3d-qual {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--navy-800);
+  line-height: 1.4;
   margin-bottom: 0.35rem;
 }
 
-.faculty-headline-name {
-  font-family: var(--font-heading);
-  font-size: 1.95rem;
-  font-weight: 800;
-  color: var(--navy-900);
-  line-height: 1.25;
-  margin-bottom: 0.4rem;
-}
-
-.faculty-qual-line {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--navy-800);
-  line-height: 1.45;
-  margin-bottom: 0.85rem;
-}
-
-.faculty-chip-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-bottom: 1.1rem;
-}
-
-.faculty-chip {
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 0.28rem 0.8rem;
-  border-radius: var(--radius-pill);
-  background: var(--sky-50);
-  color: var(--royal-600);
-  border: 1px solid var(--sky-100);
-}
-
-.faculty-narrative {
-  font-size: 1rem;
+.faculty-3d-pedigree {
+  font-size: 0.8rem;
   color: var(--ink-muted);
-  line-height: 1.75;
-  margin: 0;
+  line-height: 1.45;
 }
 
-/* Homepage Left & Right Divisions Spotlight (Full-width editorial roster) */
-.home-faculty-spotlight {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
-  max-width: 1100px;
-  margin: 1.5rem auto 3.5rem;
-}
-
-.home-faculty-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 3.25rem;
-  padding-bottom: 3.5rem;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
-  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.home-faculty-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.home-faculty-item .faculty-left-media {
-  width: 340px;
-  flex-shrink: 0;
-}
-
-.home-faculty-item .faculty-square-frame {
-  width: 340px;
-  height: 340px;
-}
-
-.home-faculty-item .faculty-right-content {
-  flex-grow: 1;
-  padding-top: 0.35rem;
-}
-
-.home-faculty-item .faculty-headline-name {
-  font-size: 1.95rem;
-  margin-bottom: 0.4rem;
-}
-
-.home-faculty-item .faculty-qual-line {
-  font-size: 1rem;
-  margin-bottom: 0.85rem;
-}
-
-.home-faculty-item .faculty-narrative {
-  font-size: 1rem;
-  line-height: 1.75;
-}
+/* 3-Column Desktop Grid Centering for 7th Item */
+@media (min-width: 992px) {
+  .faculty-grid-3x3 > .faculty-3d-card:last-child:nth-child(3n + 1),
+  .faculty-roster > .faculty-3d-card:last-child:nth-child(3n + 1),
+  .home-faculty-spotlight > .faculty-3d-card:last-child:nth-child(3n + 1) {
+    grid-column: 2 / 3;
+  }
+}}
 
 .academic-feature {
   padding: 1.65rem 1.35rem;
@@ -1098,63 +976,46 @@
   color: var(--navy-900);
 }
 
-@media (max-width: 991px) {
+/* Tablet Responsive (2 Columns) */
+@media (max-width: 991px) and (min-width: 641px) {
+  .faculty-grid-3x3,
   .faculty-roster,
   .home-faculty-spotlight {
-    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 1.75rem;
+    max-width: 760px;
   }
-  .faculty-profile,
-  .home-faculty-item {
-    gap: 2.25rem;
+  .faculty-grid-3x3 > .faculty-3d-card:last-child:nth-child(2n + 1),
+  .faculty-roster > .faculty-3d-card:last-child:nth-child(2n + 1),
+  .home-faculty-spotlight > .faculty-3d-card:last-child:nth-child(2n + 1) {
+    grid-column: 1 / -1;
+    max-width: 320px;
+    margin: 0 auto;
   }
-  .faculty-left-media,
-  .home-faculty-item .faculty-left-media,
-  .faculty-square-frame,
-  .home-faculty-item .faculty-square-frame {
-    width: 290px;
-    height: 290px;
+  .faculty-popout-wrap {
+    width: 185px;
   }
 }
 
-/* Mobile Responsive Adaptations */
+/* Mobile Responsive Adaptations (1 Column) */
 @media (max-width: 640px) {
-  .faculty-roster {
+  .faculty-grid-3x3,
+  .faculty-roster,
+  .home-faculty-spotlight {
+    grid-template-columns: 1fr;
     gap: 2.75rem;
-  }
-  .faculty-profile,
-  .home-faculty-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
-    padding-bottom: 2.5rem;
-  }
-  .faculty-left-media,
-  .home-faculty-item .faculty-left-media,
-  .faculty-avatar-wrap,
-  .home-faculty-item .faculty-avatar-wrap {
-    width: 100%;
     max-width: 320px;
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .faculty-square-frame,
-  .home-faculty-item .faculty-square-frame {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    aspect-ratio: 1 / 1;
+  .faculty-popout-wrap {
+    width: 180px;
   }
-  .faculty-right-content,
-  .home-faculty-item .faculty-right-content,
-  .faculty-details,
-  .home-faculty-item .faculty-details {
-    padding-top: 0;
+  .faculty-3d-name {
+    font-size: 1.2rem;
   }
-  .faculty-chip-list {
-    justify-content: center;
-  }
-  .faculty-headline-name {
-    font-size: 1.45rem;
+  .faculty-3d-subject {
+    font-size: 0.88rem;
   }
 }
 
