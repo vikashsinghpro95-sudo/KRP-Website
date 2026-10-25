@@ -758,26 +758,26 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  width: 270px;
+  width: 340px;
 }
 
 .faculty-square-frame {
   position: relative;
-  width: 270px;
-  height: 270px;
+  width: 340px;
+  height: 340px;
   aspect-ratio: 1 / 1;
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
   background: #f1f5f9;
-  box-shadow: 0 12px 30px -6px rgba(6, 13, 43, 0.16), 0 4px 12px -2px rgba(6, 13, 43, 0.08);
-  border: 1px solid rgba(14, 116, 144, 0.12);
+  box-shadow: 0 16px 36px -8px rgba(6, 13, 43, 0.18), 0 4px 14px -2px rgba(6, 13, 43, 0.08);
+  border: 1px solid rgba(14, 116, 144, 0.14);
   transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .faculty-profile:hover .faculty-square-frame,
 .home-faculty-item:hover .faculty-square-frame {
   transform: translateY(-4px);
-  box-shadow: 0 20px 42px -6px rgba(6, 13, 43, 0.22), 0 0 0 2px var(--gold-400);
+  box-shadow: 0 22px 48px -8px rgba(6, 13, 43, 0.24), 0 0 0 2px var(--gold-400);
   border-color: var(--gold-400);
 }
 
@@ -803,7 +803,7 @@
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  padding: 0.3rem 0.8rem;
+  padding: 0.32rem 0.85rem;
   border-radius: var(--radius-pill);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   pointer-events: none;
@@ -823,47 +823,43 @@
   backdrop-filter: blur(4px);
 }
 
-/* Lower-Left Text Overlay on Big Square Image */
+/* Lower-Left Text Overlay on Big Square Image (Compact to keep face fully visible) */
 .faculty-media-overlay {
   position: absolute;
   inset: auto 0 0 0;
-  height: 62%;
-  background: linear-gradient(to top, rgba(6, 13, 43, 0.96) 0%, rgba(6, 13, 43, 0.75) 50%, rgba(6, 13, 43, 0.2) 82%, transparent 100%);
+  height: 30%;
+  background: linear-gradient(to top, rgba(6, 13, 43, 0.96) 0%, rgba(6, 13, 43, 0.7) 65%, transparent 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
   text-align: left;
-  padding: 1.25rem 1.15rem 1.15rem;
+  padding: 0.85rem 1.25rem 1rem;
   z-index: 2;
   pointer-events: none;
 }
 
 .overlay-dept {
-  font-size: 0.6875rem;
+  font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: var(--gold-400);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
   line-height: 1.2;
 }
 
 .overlay-name {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.2;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .overlay-sub {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.88);
-  margin-top: 0.25rem;
-  line-height: 1.3;
+  display: none;
 }
 
 /* Right Division: All Details */
@@ -872,7 +868,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-top: 0.25rem;
+  padding-top: 0.35rem;
 }
 
 .faculty-dept-eyebrow {
@@ -886,7 +882,7 @@
 
 .faculty-headline-name {
   font-family: var(--font-heading);
-  font-size: 1.85rem;
+  font-size: 1.95rem;
   font-weight: 800;
   color: var(--navy-900);
   line-height: 1.25;
@@ -894,7 +890,7 @@
 }
 
 .faculty-qual-line {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--navy-800);
   line-height: 1.45;
@@ -905,13 +901,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
 }
 
 .faculty-chip {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  padding: 0.25rem 0.75rem;
+  padding: 0.28rem 0.8rem;
   border-radius: var(--radius-pill);
   background: var(--sky-50);
   color: var(--royal-600);
@@ -919,65 +915,63 @@
 }
 
 .faculty-narrative {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ink-muted);
-  line-height: 1.7;
+  line-height: 1.75;
   margin: 0;
 }
 
-/* Homepage Left & Right Divisions Spotlight */
+/* Homepage Left & Right Divisions Spotlight (Full-width editorial roster) */
 .home-faculty-spotlight {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3.5rem 2.75rem;
-  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 1100px;
+  margin: 1.5rem auto 3.5rem;
 }
 
 .home-faculty-item {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 3.25rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
   transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.home-faculty-item:hover {
-  transform: translateY(-4px);
+.home-faculty-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.home-faculty-item .faculty-left-media,
-.home-faculty-item .faculty-avatar-wrap {
-  width: 235px;
+.home-faculty-item .faculty-left-media {
+  width: 340px;
   flex-shrink: 0;
 }
 
 .home-faculty-item .faculty-square-frame {
-  width: 235px;
-  height: 235px;
+  width: 340px;
+  height: 340px;
 }
 
-.home-faculty-item .overlay-name {
-  font-size: 1.15rem;
-}
-
-.home-faculty-item .faculty-right-content,
-.home-faculty-item .faculty-details {
+.home-faculty-item .faculty-right-content {
   flex-grow: 1;
-  padding-top: 0.15rem;
+  padding-top: 0.35rem;
 }
 
 .home-faculty-item .faculty-headline-name {
-  font-size: 1.45rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.95rem;
+  margin-bottom: 0.4rem;
 }
 
 .home-faculty-item .faculty-qual-line {
-  font-size: 0.85rem;
-  margin-bottom: 0.65rem;
+  font-size: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .home-faculty-item .faculty-narrative {
-  font-size: 0.875rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 .academic-feature {
@@ -1003,9 +997,20 @@
 }
 
 @media (max-width: 991px) {
+  .faculty-roster,
   .home-faculty-spotlight {
-    grid-template-columns: 1fr;
     gap: 3rem;
+  }
+  .faculty-profile,
+  .home-faculty-item {
+    gap: 2.25rem;
+  }
+  .faculty-left-media,
+  .home-faculty-item .faculty-left-media,
+  .faculty-square-frame,
+  .home-faculty-item .faculty-square-frame {
+    width: 290px;
+    height: 290px;
   }
 }
 
