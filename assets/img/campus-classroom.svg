@@ -9,6 +9,4 @@
   <text x="300" y="205" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#FFB800" text-anchor="middle">Kota Pedagogy &amp; Problem Solving</text>
   <!-- Student Tier Desks -->
   <line x1="100" y1="280" x2="500" y2="280" stroke="#B9C4E4" stroke-width="3"/>
-  <line x1="70" y1="320" x2="530" y2="320" stroke="#B9C4E4" stroke-width="4"/>
-  <text x="300" y="340" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#FFFFFF" opacity="0.7" text-anchor="middle">Interactive Classroom · Photo Placeholder</text>
 </svg>
