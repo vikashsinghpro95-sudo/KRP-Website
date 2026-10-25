@@ -15,7 +15,7 @@ export const KRP_CONFIG = {
   EMAIL: "krppune.official@gmail.com",
   // Optional Formspree / Web3Forms endpoint. If empty, defaults to WhatsApp & Mailto flow.
   FORM_ENDPOINT: "", 
-  ACADEMIC_SESSION: "2025-26"
+  ACADEMIC_SESSION: "2026-2027"
 };
 
 document.addEventListener('DOMContentLoaded', () => {

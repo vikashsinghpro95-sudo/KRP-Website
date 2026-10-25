@@ -19,7 +19,7 @@ Before final public deployment, review and replace all marked placeholders (`<!-
 | **Residential Amenities** | Separate boys & girls hostels with study desks, meals, wardens | Review the amenity checklists in `residential-facilities/index.html` against actual physical hostel assets. |
 | **Faculty Credentials** | Senior mentors in Physics, Chemistry, Maths, Bio, Defence | Replace placeholder names and degrees with actual faculty profiles and photos. |
 | **Results & Selections** | AIR 42 NDA, AIR 318 JEE, 682 NEET, AIR 12 IMUCET | Replace placeholder rank cards with official verified KRP student names, photos, and ranks. |
-| **Academic Session** | `2025-26` | Confirm session year for "Admissions Open" badges and scholarship exams. |
+| **Academic Session** | `2026-2027` | Confirm session year for "Admissions Open" badges and scholarship exams. |
 | **Indexed URLs** | Standard folder-based clean slugs | Check Google Search Console for any legacy indexed URLs on `krppune.com` to map in `.htaccess`. |
 
 ---
@@ -105,7 +105,7 @@ export const KRP_CONFIG = {
   WHATSAPP_NUMBER: "918669099430", // Country code + 10 digits without '+' or spaces
   EMAIL: "krppune.official@gmail.com",
   FORM_ENDPOINT: "", // Optional Formspree / Web3Forms endpoint URL
-  ACADEMIC_SESSION: "2025-26"
+  ACADEMIC_SESSION: "2026-2027"
 };
 ```
 
